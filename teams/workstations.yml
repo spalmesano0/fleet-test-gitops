@@ -72,14 +72,6 @@ software:
     self_service: true
     uninstall_script:
       path: ../lib/workstations/scripts/google-drive-darwin-uninstall
-  - display_name: Zoomy
-    hash_sha256: a1f4b2e43098737991e615ce7e52077f625007e17feda5f06ac7091a76ff30ad
-      # Zoom (zoomusInstallerFull.pkg) version 6.5.11.62892
-    install_script:
-      path: ../lib/workstations/scripts/zoom-darwin-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/zoom-darwin-uninstall
   - hash_sha256: d2ecd42e9bb00bc41cc27919bf3c4b208189357e166befd25242f9e4485759df
       # apacheds (apacheds-2.0.0.AM27-amd64.deb) version 2.0.0.AM28-SNAPSHOT1
     install_script:
