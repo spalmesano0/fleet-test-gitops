@@ -1,0 +1,156 @@
+agent_options:
+  config:
+    decorators:
+      load:
+      - SELECT uuid AS host_uuid FROM system_info;
+      - SELECT hostname AS hostname FROM system_info;
+    options:
+      disable_distributed: false
+      distributed_interval: 10
+      distributed_plugin: tls
+      distributed_tls_max_attempts: 3
+      logger_tls_endpoint: /api/osquery/log
+      logger_tls_period: 10
+      pack_delimiter: /
+  overrides:
+controls:
+  enable_disk_encryption: false
+  ios_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts:
+  ipados_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts:
+  macos_settings:
+    custom_settings:
+    - path: ../lib/workstations/profiles/managed-login-items.mobileconfig
+  macos_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts: false
+  scripts:
+  - path: ../lib/workstations/scripts/turnOnMDMNotification.ps1
+  windows_enabled_and_configured: true
+  windows_require_bitlocker_pin: false
+  windows_settings:
+    custom_settings:
+    - labels_include_all:
+      - Windows Hosts
+      path: ../lib/workstations/profiles/enable-windows-recall.xml
+    - path: ../lib/workstations/profiles/softwareupdate.xml
+  windows_updates:
+    deadline_days:
+    grace_period_days:
+labels:
+name: Workstations
+policies:
+- calendar_events_enabled: false
+  conditional_access_enabled: false
+  critical: true
+  description:
+  name: Windows - MDM Enabled
+  platform: windows
+  query: SELECT 1 FROM mdm_bridge WHERE enrollment_status = 'device_enrolled';
+  resolution:
+- calendar_events_enabled: false
+  conditional_access_enabled: false
+  critical: false
+  description:
+  name: Test 2
+  platform: linux
+  query: SELECT 1 FROM osquery_info WHERE start_time > 1;
+  resolution:
+queries:
+software:
+  packages:
+  - categories:
+    - Productivity
+    hash_sha256: a5d9c48532424a877f5676ca56f084a90ccd8c6c033f3dbc3abf7bfa32d2c099
+      # 1Password (1Password-8.11.2-aarch64.zip) version 8.11.2
+    install_script:
+      path: ../lib/workstations/scripts/1password-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/1password-darwin-uninstall
+    url: https://downloads.1password.com/mac/1Password-8.11.2-aarch64.zip
+  - hash_sha256: 03485f401c544f3523b7d5f2156639a0c1aac15524e5abf204b663846a41aa8b
+      # Google Drive (GoogleDrive.pkg) version 112.0
+    install_script:
+      path: ../lib/workstations/scripts/google-drive-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/google-drive-darwin-uninstall
+  - display_name: Zoomy
+    hash_sha256: a1f4b2e43098737991e615ce7e52077f625007e17feda5f06ac7091a76ff30ad
+      # Zoom (zoomusInstallerFull.pkg) version 6.5.11.62892
+    install_script:
+      path: ../lib/workstations/scripts/zoom-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/zoom-darwin-uninstall
+  - hash_sha256: d2ecd42e9bb00bc41cc27919bf3c4b208189357e166befd25242f9e4485759df
+      # apacheds (apacheds-2.0.0.AM27-amd64.deb) version 2.0.0.AM28-SNAPSHOT1
+    install_script:
+      path: ../lib/workstations/scripts/apacheds-linux-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/apacheds-linux-uninstall
+  - categories:
+    - Browsers
+    hash_sha256: f87e702a31e90c82cc737f3243fb02d8b7625f424745b684fc026c0e993769d2
+      # Google Chrome (GoogleChrome.pkg) version 141.0.7390.55
+    install_script:
+      path: ../lib/workstations/scripts/google-chrome-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/google-chrome-darwin-uninstall
+    url: https://dl.google.com/dl/chrome/mac/universal/stable/gcem/GoogleChrome.pkg
+  - hash_sha256: 005974da63900c2386ff94c93b629e72621040694acae88f52e921fe855b9045
+      # Logi Options+ Driver Installer (driver.pkg) version 1.0.3
+    install_script:
+      path: ../lib/workstations/scripts/logi-options+-driver-installer-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/logi-options+-driver-installer-darwin-uninstall
+  - hash_sha256: 4fc518b89642e72bcef5358519c0c28af85d080d4c846dba0ec8365f556d68e4
+      # logioptionsplus (logi.pkg) version 1.94.762104
+    install_script:
+      path: ../lib/workstations/scripts/logioptionsplus-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/logioptionsplus-darwin-uninstall
+  - hash_sha256: afe88f2514c7cf67d83d1790bfc0128434ecef2ff99d2826568aeef23ec7a6d9
+      # LogiPluginService (plugin.pkg) version 6.2.0.492
+    install_script:
+      path: ../lib/workstations/scripts/logipluginservice-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/logipluginservice-darwin-uninstall
+  - hash_sha256: 5df4ba4a559ae9dbb75fcc1c1961e49c7da6b12a6281de867881f051d5eb4b35
+      # Zoom Meetings Installer (ZoomInstallerFull.exe) version 6.7.0
+    install_script:
+      path: ../lib/workstations/scripts/zoom-meetings-installer-windows-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/workstations/scripts/zoom-meetings-installer-windows-uninstall
+team_settings:
+  features:
+    enable_host_users: true
+    enable_software_inventory: true
+  host_expiry_settings:
+    host_expiry_enabled: false
+    host_expiry_window: 0
+  integrations:
+    conditional_access_enabled:
+    google_calendar:
+  secrets:
+  - secret: $FLEET_WORKSTATIONS_ENROLL_SECRET
+  webhook_settings:
+    failing_policies_webhook:
+      destination_url:
+      enable_failing_policies_webhook: false
+      host_batch_size: 0
+      policy_ids:
+    host_status_webhook:

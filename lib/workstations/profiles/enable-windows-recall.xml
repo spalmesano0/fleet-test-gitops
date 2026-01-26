@@ -1,0 +1,27 @@
+<Replace>
+  <!-- Enable Recall (disabled by default with managed devices) --> 
+  <CmdID>1</CmdID>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/WindowsAI/AllowRecallEnablement</LocURI>
+    </Target>
+    <Data>1</Data>
+  </Item>
+</Replace>
+
+<Replace>
+  <!-- Allow saving snapshots for Recall --> 
+  <CmdID>2</CmdID>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/WindowsAI/DisableAIDataAnalysis</LocURI>
+    </Target>
+    <Data>0</Data>
+  </Item>
+</Replace>

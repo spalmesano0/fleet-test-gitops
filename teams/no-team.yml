@@ -1,0 +1,47 @@
+controls:
+  enable_disk_encryption: false
+  enable_turn_on_windows_mdm_manually: false
+  ios_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts:
+  ipados_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts:
+  macos_migration:
+    enable: false
+    mode:
+    webhook_url:
+  macos_updates:
+    deadline:
+    minimum_version:
+    update_new_hosts: false
+  scripts:
+  windows_enabled_and_configured: true
+  windows_migration_enabled: false
+  windows_require_bitlocker_pin: false
+  windows_updates:
+    deadline_days:
+    grace_period_days:
+name: No team
+policies:
+software:
+  packages:
+  - categories:
+    - Productivity
+    hash_sha256: a5d9c48532424a877f5676ca56f084a90ccd8c6c033f3dbc3abf7bfa32d2c099
+      # 1Password (1Password-8.11.2-aarch64.zip) version 8.11.2
+    install_script:
+      path: ../lib/no-team/scripts/1password-darwin-install
+    self_service: true
+    uninstall_script:
+      path: ../lib/no-team/scripts/1password-darwin-uninstall
+    url: https://downloads.1password.com/mac/1Password-8.11.2-aarch64.zip
+team_settings:
+  webhook_settings:
+    failing_policies_webhook:
+      destination_url:
+      enable_failing_policies_webhook: false
+      host_batch_size: 0
+      policy_ids:

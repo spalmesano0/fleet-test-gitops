@@ -1,0 +1,147 @@
+agent_options:
+  config:
+    decorators:
+      load:
+      - SELECT uuid AS host_uuid FROM system_info;
+      - SELECT hostname AS hostname FROM system_info;
+    options:
+      disable_distributed: false
+      distributed_interval: 10
+      distributed_plugin: tls
+      distributed_tls_max_attempts: 3
+      logger_tls_endpoint: /api/osquery/log
+      logger_tls_period: 10
+      pack_delimiter: /
+  overrides:
+labels:
+- description:
+  label_membership_type: dynamic
+  name: Windows Hosts
+  platform: windows
+  query: SELECT 1 FROM os_version WHERE platform = 'windows';
+- description:
+  label_membership_type: dynamic
+  name: Mac Hosts
+  platform: darwin
+  query: SELECT 1 FROM os_version WHERE platform = 'darwin';
+- description:
+  label_membership_type: dynamic
+  name: Test label
+  query: SELECT 1 FROM os_version WHERE major >= 13;
+- description:
+  label_membership_type: dynamic
+  name: Virtual machines
+  query: SELECT 1 FROM system_info WHERE hardware_model LIKE 'VirtualMac%';
+org_settings:
+  certificate_authorities:
+    custom_est_proxy:
+    custom_scep_proxy:
+    digicert:
+    hydrant:
+    ndes_scep_proxy:
+    smallstep:
+  features:
+    detail_query_overrides:
+      network_interface_chrome:
+      network_interface_unix:
+      network_interface_windows:
+    enable_host_users: true
+    enable_software_inventory: true
+  fleet_desktop:
+    transparency_url: https://fleetdm.com/transparency
+  host_expiry_settings:
+    host_expiry_enabled: false
+    host_expiry_window: 0
+  integrations:
+    conditional_access_enabled:
+    google_calendar:
+    jira:
+    zendesk:
+  mdm:
+    apple_business_manager:
+    apple_server_url:
+    end_user_authentication:
+      entity_id:
+      idp_name:
+      issuer_uri:
+      metadata:
+      metadata_url:
+    end_user_license_agreement:
+    volume_purchasing_program:
+  org_info:
+    contact_url: https://fleetdm.com/company/contact
+    org_logo_url:
+    org_logo_url_light_background:
+    org_name: Acme
+  secrets:
+  - secret: $FLEET_GLOBAL_ENROLL_SECRET
+  server_settings:
+    ai_features_disabled: false
+    deferred_save_host: false
+    enable_analytics: true
+    live_query_disabled: false
+    query_report_cap: 0
+    query_reports_disabled: false
+    scripts_disabled: false
+    server_url: $FLEET_URL
+  sso_settings:
+    enable_jit_provisioning: false
+    enable_sso: false
+    enable_sso_idp_login: false
+    entity_id:
+    idp_image_url:
+    idp_name:
+    metadata:
+    metadata_url:
+    sso_server_url:
+  webhook_settings:
+    activities_webhook:
+      destination_url:
+      enable_activities_webhook: false
+    failing_policies_webhook:
+      destination_url:
+      enable_failing_policies_webhook: false
+      host_batch_size: 0
+      policy_ids:
+    host_status_webhook:
+      days_count: 0
+      destination_url:
+      enable_host_status_webhook: false
+      host_percentage: 0
+    interval: 24h0m0s
+    vulnerabilities_webhook:
+      destination_url:
+      enable_vulnerabilities_webhook: false
+      host_batch_size: 0
+  yara_rules:
+policies:
+- calendar_events_enabled: false
+  conditional_access_enabled: false
+  critical: false
+  description:
+  name: Test
+  platform: darwin,windows,linux,chrome
+  query: SELECT 1 FROM osquery_info WHERE start_time > 1;
+  resolution:
+queries:
+- automations_enabled: false
+  description:
+  discard_data: false
+  interval: 0
+  logging: snapshot
+  min_osquery_version:
+  name: File carve test
+  observer_can_run: true
+  platform: darwin,windows,linux
+  query: SELECT * FROM carves WHERE path LIKE '/tmp/testing.txt' AND carve=1;
+- automations_enabled: false
+  description: Collects operating system information from all devices enrolled in
+    Fleet
+  discard_data: false
+  interval: 300
+  logging: snapshot
+  min_osquery_version:
+  name: Collect operating system information
+  observer_can_run: true
+  platform: darwin,linux,windows
+  query: SELECT * FROM os_version;
