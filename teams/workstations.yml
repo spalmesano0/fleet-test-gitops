@@ -65,27 +65,6 @@ policies:
 queries:
 software:
   packages:
-  - hash_sha256: 03485f401c544f3523b7d5f2156639a0c1aac15524e5abf204b663846a41aa8b
-      # Google Drive (GoogleDrive.pkg) version 112.0
-    install_script:
-      path: ../lib/workstations/scripts/google-drive-darwin-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/google-drive-darwin-uninstall
-  - hash_sha256: d2ecd42e9bb00bc41cc27919bf3c4b208189357e166befd25242f9e4485759df
-      # apacheds (apacheds-2.0.0.AM27-amd64.deb) version 2.0.0.AM28-SNAPSHOT1
-    install_script:
-      path: ../lib/workstations/scripts/apacheds-linux-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/apacheds-linux-uninstall
-  - hash_sha256: 5df4ba4a559ae9dbb75fcc1c1961e49c7da6b12a6281de867881f051d5eb4b35
-      # Zoom Meetings Installer (ZoomInstallerFull.exe) version 6.7.0
-    install_script:
-      path: ../lib/workstations/scripts/zoom-meetings-installer-windows-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/zoom-meetings-installer-windows-uninstall
 team_settings:
   features:
     enable_host_users: true
