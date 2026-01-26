@@ -107,27 +107,6 @@ software:
     uninstall_script:
       path: ../lib/workstations/scripts/google-chrome-darwin-uninstall
     url: https://dl.google.com/dl/chrome/mac/universal/stable/gcem/GoogleChrome.pkg
-  - hash_sha256: 005974da63900c2386ff94c93b629e72621040694acae88f52e921fe855b9045
-      # Logi Options+ Driver Installer (driver.pkg) version 1.0.3
-    install_script:
-      path: ../lib/workstations/scripts/logi-options+-driver-installer-darwin-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/logi-options+-driver-installer-darwin-uninstall
-  - hash_sha256: 4fc518b89642e72bcef5358519c0c28af85d080d4c846dba0ec8365f556d68e4
-      # logioptionsplus (logi.pkg) version 1.94.762104
-    install_script:
-      path: ../lib/workstations/scripts/logioptionsplus-darwin-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/logioptionsplus-darwin-uninstall
-  - hash_sha256: afe88f2514c7cf67d83d1790bfc0128434ecef2ff99d2826568aeef23ec7a6d9
-      # LogiPluginService (plugin.pkg) version 6.2.0.492
-    install_script:
-      path: ../lib/workstations/scripts/logipluginservice-darwin-install
-    self_service: true
-    uninstall_script:
-      path: ../lib/workstations/scripts/logipluginservice-darwin-uninstall
   - hash_sha256: 5df4ba4a559ae9dbb75fcc1c1961e49c7da6b12a6281de867881f051d5eb4b35
       # Zoom Meetings Installer (ZoomInstallerFull.exe) version 6.7.0
     install_script:
