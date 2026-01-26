@@ -74,7 +74,7 @@ org_settings:
     org_logo_url_light_background:
     org_name: Acme
   secrets:
-  - secret: $FLEET_GLOBAL_ENROLL_SECRET
+  - secret: "$FLEET_GLOBAL_ENROLL_SECRET"
   server_settings:
     ai_features_disabled: false
     deferred_save_host: false
@@ -83,7 +83,7 @@ org_settings:
     query_report_cap: 0
     query_reports_disabled: false
     scripts_disabled: false
-    server_url: $FLEET_URL
+    server_url: "$FLEET_URL"
   sso_settings:
     enable_jit_provisioning: false
     enable_sso: false
