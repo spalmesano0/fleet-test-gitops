@@ -4,6 +4,7 @@
 #   query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
 - name: C-Suite
   description: Hosts belonging to the C-Suite
+  label_membership_type: manual
   hosts:
     - "IR7M6ZGQJM"
     - "JMFWY8VZ09"
