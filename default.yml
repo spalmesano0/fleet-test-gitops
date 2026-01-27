@@ -32,6 +32,7 @@ labels:
     label_membership_type: dynamic
     name: Virtual machines
     query: SELECT 1 FROM system_info WHERE hardware_model LIKE 'VirtualMac%';
+  - path: ./lib/all/default.labels.yml
 org_settings:
   certificate_authorities:
     custom_est_proxy:
