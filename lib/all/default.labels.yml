@@ -1,14 +1,14 @@
-- name: Arm64
-  platform: darwin,windows
-  description: Hosts on the Arm64 architecture
-  query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
+# - name: Arm64
+#   platform: darwin,windows
+#   description: Hosts on the Arm64 architecture
+#   query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
 - name: C-Suite
   description: Hosts belonging to the C-Suite
   hosts:
     - "IR7M6ZGQJM"
     - "JMFWY8VZ09"
-- name: Engineering department
-  description: Hosts used by engineers
-  criteria:
-    vital: end_user_idp_department
-    value: Engineering
+# - name: Engineering department
+#   description: Hosts used by engineers
+#   criteria:
+#     vital: end_user_idp_department
+#     value: Engineering
