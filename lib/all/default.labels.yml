@@ -8,8 +8,8 @@
   hosts:
     - "IR7M6ZGQJM"
     - "JMFWY8VZ09"
- - name: Engineering department
-   description: Hosts used by engineers
-   criteria:
-     vital: end_user_idp_department
-     value: Engineering
+- name: Engineering department
+  description: Hosts used by engineers
+  criteria:
+    vital: end_user_idp_department
+    value: Engineering
