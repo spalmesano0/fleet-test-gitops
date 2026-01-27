@@ -14,24 +14,24 @@ agent_options:
       pack_delimiter: /
   overrides:
 labels:
-- description:
-  label_membership_type: dynamic
-  name: Windows Hosts
-  platform: windows
-  query: SELECT 1 FROM os_version WHERE platform = 'windows';
-- description:
-  label_membership_type: dynamic
-  name: Mac Hosts
-  platform: darwin
-  query: SELECT 1 FROM os_version WHERE platform = 'darwin';
-- description:
-  label_membership_type: dynamic
-  name: Test label
-  query: SELECT 1 FROM os_version WHERE major >= 13;
-- description:
-  label_membership_type: dynamic
-  name: Virtual machines
-  query: SELECT 1 FROM system_info WHERE hardware_model LIKE 'VirtualMac%';
+  - description:
+    label_membership_type: dynamic
+    name: Windows Hosts
+    platform: windows
+    query: SELECT 1 FROM os_version WHERE platform = 'windows';
+  - description:
+    label_membership_type: dynamic
+    name: Mac Hosts
+    platform: darwin
+    query: SELECT 1 FROM os_version WHERE platform = 'darwin';
+  - description:
+    label_membership_type: dynamic
+    name: Test label
+    query: SELECT 1 FROM os_version WHERE major >= 13;
+  - description:
+    label_membership_type: dynamic
+    name: Virtual machines
+    query: SELECT 1 FROM system_info WHERE hardware_model LIKE 'VirtualMac%';
 org_settings:
   certificate_authorities:
     custom_est_proxy:
