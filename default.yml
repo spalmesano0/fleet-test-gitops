@@ -60,6 +60,8 @@ org_settings:
     zendesk:
   mdm:
     apple_business_manager:
+    - organization_name: Acme Corp.
+      macos_team: Workstations (canary)
     apple_server_url:
     end_user_authentication:
       entity_id:
