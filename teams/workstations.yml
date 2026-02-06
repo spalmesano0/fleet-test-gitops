@@ -25,7 +25,7 @@ controls:
     update_new_hosts:
   macos_settings:
     custom_settings:
-    - path: ../lib/workstations/profiles/managed-login-items.mobileconfig
+    - path: ../lib/profile-move/managed-login-items.mobileconfig
   macos_updates:
     deadline:
     minimum_version:
