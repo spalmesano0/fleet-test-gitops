@@ -41,6 +41,11 @@ name: iOS
 policies:
 queries:
 software:
+  app_store_apps:
+    - app_store_id: "us.zoom.videomeetings"
+      platform: android
+      self_service: true
+      setup_experience: false
 team_settings:
   features:
     detail_query_overrides:
