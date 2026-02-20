@@ -38,8 +38,7 @@ controls:
     custom_settings:
     - labels_include_all:
       - Windows Hosts
-      path: ../lib/workstations/profiles/enable-windows-recall.xml
-    - path: ../lib/workstations/profiles/softwareupdate.xml
+    - path: ../lib/workstations/profiles/enable-windows-recall.xml
   windows_updates:
     deadline_days:
     grace_period_days:
