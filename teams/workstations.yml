@@ -30,6 +30,8 @@ controls:
     deadline:
     minimum_version:
     update_new_hosts: false
+  macos_setup:
+    macos_setup_assistant: ../lib/workstations/profiles/automatic-enrollment.dep.json
   scripts:
   - path: ../lib/workstations/scripts/turnOnMDMNotification.ps1
   windows_enabled_and_configured: true
