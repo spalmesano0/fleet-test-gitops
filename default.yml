@@ -61,7 +61,7 @@ org_settings:
   mdm:
     apple_business_manager:
     - organization_name: Fleet Device Management Inc.
-      macos_team: Workstations (canary)
+      macos_team: Workstations
     apple_server_url:
     end_user_authentication:
       entity_id:
