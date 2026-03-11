@@ -14,3 +14,7 @@
   criteria:
     vital: end_user_idp_department
     value: Engineering
+- name: macOS Sequoia
+  platform: darwin
+  description: macOS Sequoia devices
+  query: "SELECT 1 FROM os_version WHERE major = 15;"
