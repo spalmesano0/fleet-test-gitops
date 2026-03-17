@@ -1,6 +1,12 @@
 - name: Arm64
-  platform: darwin,windows
-  description: Hosts on the Arm64 architecture
+  description: Devices on the Arm64 architecture
+- name: Arm64 Macs
+  platform: darwin
+  description: macOS devices on the Arm64 architecture
+  query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
+- name: Arm64 Windows
+  platform: windows
+  description: windows devices on the Arm64 architecture
   query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
 - name: C-Suite
   description: Hosts belonging to the C-Suite
