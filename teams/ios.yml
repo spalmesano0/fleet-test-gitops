@@ -41,10 +41,6 @@ name: iOS
 policies:
 queries:
 software:
-  app_store_apps:
-    - app_store_id: "com.Slack"
-      platform: android
-      self_service: true
 team_settings:
   features:
     detail_query_overrides:
