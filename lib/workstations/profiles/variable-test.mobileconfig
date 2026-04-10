@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadDescription</key>
+            <string>Variable value: $FLEET_SECRET_TESTING</string>
+            <key>PayloadDisplayName</key>
+            <string>Fleet Variable Test</string>
+            <key>PayloadIdentifier</key>
+            <string>com.fleetdm.test.variable-test.content</string>
+            <key>PayloadType</key>
+            <string>com.apple.configurationprofile.identification</string>
+            <key>PayloadUUID</key>
+            <string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Variable: $FLEET_SECRET_TESTING</string>
+    <key>PayloadDisplayName</key>
+    <string>Fleet Variable Test</string>
+    <key>PayloadIdentifier</key>
+    <string>com.fleetdm.test.variable-test</string>
+    <key>PayloadOrganization</key>
+    <string>Fleet Test</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>

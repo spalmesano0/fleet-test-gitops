@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadDescription</key>
+            <string>Variable value: $FLEET_SECRET_OKTA_SCEP_CHALLENGE</string>
+            <key>PayloadDisplayName</key>
+            <string>Fleet Variable Test Okta</string>
+            <key>PayloadIdentifier</key>
+            <string>com.fleetdm.test.variable-test-okta.content</string>
+            <key>PayloadType</key>
+            <string>com.apple.configurationprofile.identification</string>
+            <key>PayloadUUID</key>
+            <string>57CF0714-AF5E-4BBF-B177-F7D20D29F17D</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Variable: $FLEET_SECRET_OKTA_SCEP_CHALLENGE</string>
+    <key>PayloadDisplayName</key>
+    <string>Fleet Variable Test Okta</string>
+    <key>PayloadIdentifier</key>
+    <string>com.fleetdm.test.variable-test-okta</string>
+    <key>PayloadOrganization</key>
+    <string>Fleet Test</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>AE3CEA07-5173-491E-AC49-814C21E3AD9B</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
