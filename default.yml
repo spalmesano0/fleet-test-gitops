@@ -76,8 +76,6 @@ org_settings:
     org_logo_url:
     org_logo_url_light_background:
     org_name: Acme
-  secrets:
-  - secret: "$FLEET_GLOBAL_ENROLL_SECRET"
   server_settings:
     ai_features_disabled: false
     deferred_save_host: false

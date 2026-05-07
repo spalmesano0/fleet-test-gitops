@@ -52,8 +52,6 @@ team_settings:
   integrations:
     conditional_access_enabled:
     google_calendar:
-  secrets:
-  - secret: "$FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET"
   webhook_settings:
     failing_policies_webhook:
       destination_url:
