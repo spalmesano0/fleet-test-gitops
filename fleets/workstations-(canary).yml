@@ -14,7 +14,7 @@ agent_options:
       pack_delimiter: /
   overrides:
 controls:
-  enable_disk_encryption: true
+  enable_disk_encryption: false
   ios_updates:
     deadline:
     minimum_version:
