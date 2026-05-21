@@ -25,3 +25,7 @@
   platform: darwin
   description: macOS Sequoia devices
   query: "SELECT 1 FROM os_version WHERE major = 15;"
+- name: macOS Tahoe
+  platform: darwin
+  description: macOS Tahoe devices
+  query: "SELECT 1 FROM os_version WHERE major = 26;"
