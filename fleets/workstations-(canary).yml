@@ -28,7 +28,7 @@ controls:
     minimum_version:
     update_new_hosts: false
   macos_setup:
-    macos_setup_assistant: ../lib/workstations-\(canary\)/profiles/automatic-enrollment.dep.json
+    macos_setup_assistant: ../lib/workstations-(canary)/profiles/automatic-enrollment.dep.json
   scripts:
   windows_enabled_and_configured: true
   windows_require_bitlocker_pin: false
