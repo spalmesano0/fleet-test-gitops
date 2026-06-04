@@ -73,7 +73,7 @@ org_settings:
     volume_purchasing_program:
     - location: Steven Palmesano
       fleets:
-      - All fleets
+      - All teams
   org_info:
     contact_url: https://fleetdm.com/company/contact
     org_logo_url:
