@@ -25,7 +25,7 @@ controls:
     update_new_hosts:
   macos_settings:
     custom_settings:
-    - path: ../lib/profile-move/managed-login-items.mobileconfig
+#    - path: ../lib/profile-move/managed-login-items.mobileconfig
     - path: ../lib/workstations/profiles/variable-test.mobileconfig
       labels_include_any:
         - Virtual machines
