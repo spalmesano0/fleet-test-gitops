@@ -82,6 +82,10 @@ software:
       version: "16.0.1"
       self_service: true
       setup_experience: false
+    - slug: spotify/windows
+      version: "1.2.92.148.g882cc571"
+      self_service: true
+      setup_experience: false
 team_settings:
   features:
     enable_host_users: true
