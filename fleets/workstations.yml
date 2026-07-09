@@ -77,6 +77,11 @@ software:
       self_service: true
       icon:
         path: ../lib/workstations/icons/google-drive-icon.png
+  fleet_maintained_apps:
+    - slug: bbedit/darwin
+      version: "16.0.1"
+      self_service: true
+      setup_experience: false
 team_settings:
   features:
     enable_host_users: true
